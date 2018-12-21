@@ -15,6 +15,7 @@ or
 `$ python accent-copier.py n`
 
 The following gets returned and should appear on the system clipboard.
+
 `ñ`
 
 # Depends

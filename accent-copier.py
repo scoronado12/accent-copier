@@ -12,36 +12,35 @@ def main():
     
     while (running == True):
         print("Select a character to copy")
-        print(" 1) ñ \t 2) á")
-        print(" 2) é \t 3) í")
-        print(" 4) ó \t 5) ú")
-        print(" 6) ¿ \t 7) ¡")
+        print(" 1) ñ \t 2) á \n 3) é \t 4) í \n 5) ó \t 6) ú \n 7) ¿ \t 8) ¡")
             
         selection = input("Your Selection: ")
         if (selection == "1"):
             cp.copy(spanish_chars[0])
-            print("\n" * 100)
+            print("Selected " + spanish_chars[0])
         elif (selection == "2"):
             cp.copy(spanish_chars[1])
-            print("\n" * 100)
+            print("Selected " + spanish_chars[1])
         elif (selection == "3"):
             cp.copy(spanish_chars[2])
-            print("\n" * 100)
+            print("Selected " + spanish_chars[2])
         elif (selection == "4"):
             cp.copy(spanish_chars[3])
-            print("\n" * 100)
+            print("Selected " + spanish_chars[3])
         elif(selection == "5"):
             cp.copy(spanish_chars[4])
-            print("\n" * 100)
+            print("Selected " + spanish_chars[4])
         elif(selection == "6"):
             cp.copy(spanish_chars[5])
-            print("\n" * 100)
+            print("Selected " + spanish_chars[5])
         elif(selection == "7"):
             cp.copy(spanish_chars[6])
-            print("\n" * 100)
-        elif(selection == "quit"):
+            print("Selected " + spanish_chars[6])
+            print("Selected " + spanish_chars[6])
+        elif((selection == "quit") or (selection == "q")):
+            print("¡Chau!")
             exit()
-            
+                        
 
 def charInCharOut(argv):
     
