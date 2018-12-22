@@ -2,7 +2,6 @@
 import pyperclip as cp
 import sys
 
-# Proof of Concept to assist in proper Spanish writing
 
 spanish_chars = ["ñ", "á" , "é", "í", "ó", "ú" , "¿", "¡"]
 
@@ -36,10 +35,9 @@ def main():
         elif(selection == "7"):
             cp.copy(spanish_chars[6])
             print("Selected " + spanish_chars[6])
-            print("Selected " + spanish_chars[6])
         elif(selection == "8"):
             print("Selected " + spanish_chars[7])
-            print("Selected " + spanish_chars[7])
+            cp.copy(spanish_chars[7])
         elif((selection == "quit") or (selection == "q")):
             print("¡Chau!")
             exit()
