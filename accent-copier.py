@@ -6,6 +6,7 @@ import sys
 spanish_chars = dict(
                     zip(['a','e','i','o', 'n','u','?','!'],
                     ['á', 'é', 'í', 'ó', 'ñ', 'ú', '¿', '¡']))
+
         
 def main():
     running = True
@@ -14,16 +15,16 @@ def main():
         print("Select a character to copy")
         print(" n) ñ \t a) á \n e) é \t i) í \n o) ó \t u) ú \n ?) ¿ \t !) ¡ \n q) quit")
         
-        selection = input("Your Selection: ")
-
         try:
+            selection = input("Your Selection: ")
             if selection == 'q':
                 exit()
             cp.copy(charInCharOut(selection))
             
         except KeyError:
             print("This is not a selection")
-           
+        except KeyboardInterrupt:
+            exit()
 
 def charInCharOut(argv):
     
@@ -36,8 +37,7 @@ def charInCharOut(argv):
         return char
     
     print('Pass a proper char.')
-    exit(1)
-
+    return 0
     
 
 
