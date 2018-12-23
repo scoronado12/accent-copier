@@ -3,7 +3,6 @@ import pyperclip as cp
 import sys
 
 
-#spanish_chars = ["ñ", "á" , "é", "í", "ó", "ú" , "¿", "¡"]
 spanish_chars = dict(
                     zip(['a','e','i','o', 'n','u','?','!'],
                     ['á', 'é', 'í', 'ó', 'ñ', 'ú', '¿', '¡']))
@@ -15,59 +14,29 @@ def main():
         print("Select a character to copy")
         print(" n) ñ \t a) á \n e) é \t i) í \n o) ó \t u) ú \n ?) ¿ \t !) ¡ \n q) quit")
         
-        
-        
-        
-        
-        
         selection = input("Your Selection: ")
 
-        
-        print(selection)
-        charInCharOut(spanish_chars[selection])
-        
-        
-        '''
-        if (selection == "1"):
-            cp.copy(spanish_chars[0])
-            print("Selected " + spanish_chars[0])
-        elif (selection == "2"):
-            cp.copy(spanish_chars[1])
-            print("Selected " + spanish_chars[1])
-        elif (selection == "3"):
-            cp.copy(spanish_chars[2])
-            print("Selected " + spanish_chars[2])
-        elif (selection == "4"):
-            cp.copy(spanish_chars[3])
-            print("Selected " + spanish_chars[3])
-        elif(selection == "5"):
-            cp.copy(spanish_chars[4])
-            print("Selected " + spanish_chars[4])
-        elif(selection == "6"):
-            cp.copy(spanish_chars[5])
-            print("Selected " + spanish_chars[5])
-        elif(selection == "7"):
-            cp.copy(spanish_chars[6])
-            print("Selected " + spanish_chars[6])
-        elif(selection == "8"):
-            print("Selected " + spanish_chars[7])
-            cp.copy(spanish_chars[7])
-        elif((selection == "quit") or (selection == "q")):
-            print("¡Chau!")
-            exit(0)
-        else:
-            print("Nothing Selected")
-           '''             
+        try:
+            if selection == 'q':
+                exit()
+            cp.copy(charInCharOut(selection))
+            
+        except KeyError:
+            print("This is not a selection")
+           
 
 def charInCharOut(argv):
     
-    if argv not in spanish_chars:
-        print('Pass a proper char.')
-        exit(1)
+    '''pass in a char, return the corresponding char '''
     
-    char = spanish_chars[argv]
-    print(char)
-    return char
+    
+    if argv in spanish_chars:
+        char = spanish_chars[argv]
+        print(char)
+        return char
+    
+    print('Pass a proper char.')
+    exit(1)
 
     
 
