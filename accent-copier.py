@@ -6,8 +6,6 @@ import sys
 spanish_chars = dict(
                     zip(['a','e','i','o', 'n','u','?','!'],
                     ['á', 'é', 'í', 'ó', 'ñ', 'ú', '¿', '¡']))
-
-        
 def main():
     running = True
     
@@ -18,18 +16,18 @@ def main():
         try:
             selection = input("Your Selection: ")
             if selection == 'q':
-                exit()
+                sys.exit()
             cp.copy(charInCharOut(selection))
             
         except KeyError:
             print("This is not a selection")
         except KeyboardInterrupt:
-            exit()
+            print("\n")
+            sys.exit()
 
 def charInCharOut(argv):
     
     '''pass in a char, return the corresponding char '''
-    
     
     if argv in spanish_chars:
         char = spanish_chars[argv]
@@ -38,12 +36,11 @@ def charInCharOut(argv):
     
     print('Pass a proper char.')
     return 0
-    
-
 
             
-if (__name__ == "__main__"):    
-    if (len(sys.argv) > 1):
+if __name__ == "__main__":    
+    
+    if len(sys.argv) > 1 :
         cp.copy(charInCharOut(sys.argv[1]))
     else:
         main()
