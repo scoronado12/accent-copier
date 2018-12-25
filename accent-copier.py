@@ -4,14 +4,14 @@ import sys
 
 
 spanish_chars = dict(
-                    zip(['a','e','i','o', 'n','u','?','!'],
-                    ['á', 'é', 'í', 'ó', 'ñ', 'ú', '¿', '¡']))
+                    zip(['a','e','i','o', 'n','u', ':u','?','!'],
+                    ['á', 'é', 'í', 'ó', 'ñ', 'ú', 'ü','¿', '¡']))
 def main():
     running = True
     
     while (running == True):
         print("Select a character to copy")
-        print(" n) ñ \t a) á \n e) é \t i) í \n o) ó \t u) ú \n ?) ¿ \t !) ¡ \n q) quit")
+        print(" n) ñ \t a) á \n e) é \t i) í \n o) ó \t u) ú \n ?) ¿ \t !) ¡ \n:u) ü \t q) quit")
         
         try:
             selection = input("Your Selection: ")
