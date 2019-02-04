@@ -12,7 +12,7 @@ or
 
 2. Also from the Commandline, pass in as a argument which character you want to use, like so
 
-`$ ./accent-copier.py n`
+`$ ./accent-copier n`
 
 The following gets returned and should appear on the system clipboard.
 
